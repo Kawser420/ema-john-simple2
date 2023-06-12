@@ -1,0 +1,10 @@
+.order-summary{
+    text-align: center;
+}
+.items{
+    margin-left: 23px;
+}
+.cart-info{
+    position: sticky;
+    top: 0;
+}
