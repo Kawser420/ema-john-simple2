@@ -1,9 +1,19 @@
 import React from 'react';
+import './Product.css'
 
 const Product = (props) => {
+    const {name, img, seller, price, ratings} = props.product;
+
+
     return (
-        <div>
-            <p>product</p>
+        <div className='product'>
+            <img src={img} alt="" />
+            <div className="product-info">
+            <p className='product-name'>{name}</p>
+            <p>Seller: {seller}</p>
+            <p>Price: ${price}</p>
+            <p><small>Ratting: {ratings} star</small></p>
+            </div>
         </div>
     );
 };

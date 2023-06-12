@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Shop.css';
+import Product from '../Product/Product';
 
-const Product = () => {
+const Cart = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -14,10 +15,10 @@ const Product = () => {
     return (
         <div className='shop-container'>
             <div className="products-container">
-                <h2>Product: {products.length}</h2>
                 {
                     products.map(product => <Product
-                         
+                    key={product.id}
+                    product={product}
                     ></Product>)
                 }
             </div>
@@ -28,4 +29,4 @@ const Product = () => {
     );
 };
 
-export default Product;
+export default Cart;
